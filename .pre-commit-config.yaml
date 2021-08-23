@@ -1,0 +1,23 @@
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.0.1
+    hooks:
+      - id: check-case-conflict
+      - id: check-executables-have-shebangs
+      - id: check-merge-conflict
+      - id: check-json
+      - id: check-yaml
+        files: .*\.(yaml|yml)$
+        args:
+          - --unsafe
+      - id: detect-private-key
+      - id: end-of-file-fixer
+      - id: trailing-whitespace
+
+  - repo: local
+    hooks:
+      - id: docker-hadolint
+        name: Run hadolint with docker
+        language: docker_image
+        entry: hadolint/hadolint:v2.6.0 hadolint
+        files: Dockerfile
