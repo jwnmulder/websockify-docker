@@ -1,0 +1,17 @@
+{
+  "extends": [
+    "config:base",
+    ":dependencyDashboard",
+    "docker:enableMajor",
+    "github>whitesource/merge-confidence:beta"
+  ],
+
+  "vulnerabilityAlerts": {
+    "labels": ["security"]
+  },
+
+  "major": {
+    "dependencyDashboardApproval": true
+  }
+}
+  
