@@ -1,6 +1,8 @@
 FROM python:3.9.6-slim-bullseye
 
-RUN pip install websockify
+COPY requirements.txt requirements.txt
+
+RUN pip install -r requirements.txt
 
 # Standard ports
 EXPOSE 443
