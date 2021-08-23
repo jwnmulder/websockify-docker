@@ -17,6 +17,12 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
+      - name: Get websockify version
+        run: |
+          VERSION=$( grep -oP "websockify==\K.*" requirements.txt )
+          echo "::set-output name=version::$VERSION"
+        id: websockify_version
+
       - name: Docker meta
         id: meta
         uses: docker/metadata-action@v3
@@ -27,9 +33,9 @@ jobs:
           tags: |
             type=ref,event=branch
             type=ref,event=pr
-            type=semver,pattern={{version}},value=0.9.0
-            type=semver,pattern={{major}}.{{minor}},value=0.9.0
-            type=semver,pattern={{major}},value=0.9.0,enable=${{ !startsWith(github.ref, 'refs/tags/v0.') && !startsWith(github.ref, 'refs/tags/0.') }}
+            type=semver,pattern={{version}},value={{ steps.websockify_version.outputs.version }}
+            type=semver,pattern={{major}}.{{minor}},value={{ steps.websockify_version.outputs.version }}
+            type=semver,pattern={{major}},value={{ steps.websockify_version.outputs.version }},enable=${{ !startsWith(steps.websockify_version.outputs.version, '0.') }}
 
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v1
