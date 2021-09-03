@@ -29,9 +29,11 @@
     {
       "matchDatasources": ["docker"],
       "matchFiles": ["Dockerfile"],
-      "matchUpdateTypes": ["minor", "patch", "pin", "digest"],
+      "matchUpdateTypes": ["patch", "pin", "digest"],
       "automerge": true,
-      "addLabels": ["automerge"]
+      "addLabels": ["automerge"],
+      "stabilityDays": 3,
+      "prCreation": "not-pending"
     }
   ],
 
