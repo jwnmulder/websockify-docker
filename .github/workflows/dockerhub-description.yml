@@ -17,5 +17,5 @@ jobs:
       with:
         username: ${{ secrets.DOCKERHUB_USERNAME }}
         password: ${{ secrets.DOCKERHUB_TOKEN }}
-        repository: jwnmulder/websockify-docker
+        repository: jwnmulder/websockify
         short-description: ${{ github.event.repository.description }}
