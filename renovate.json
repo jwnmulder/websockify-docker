@@ -32,8 +32,7 @@
       "matchUpdateTypes": ["patch", "pin", "digest"],
       "automerge": true,
       "addLabels": ["automerge"],
-      "stabilityDays": 7,
-      "prCreation": "not-pending"
+      "extends": ["schedule:weekly"]
     }
   ],
 
