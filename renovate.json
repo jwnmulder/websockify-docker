@@ -29,6 +29,7 @@
     {
       "matchDatasources": ["docker"],
       "matchFiles": ["Dockerfile"],
+      "matchPackageNames": "python",
       "matchUpdateTypes": ["patch", "pin", "digest"],
       "automerge": true,
       "addLabels": ["automerge"],
