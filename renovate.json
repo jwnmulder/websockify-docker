@@ -3,6 +3,7 @@
     "config:base",
     ":dependencyDashboard",
     "docker:enableMajor",
+    ":enablePreCommit",
     "github>whitesource/merge-confidence:beta"
   ],
 
