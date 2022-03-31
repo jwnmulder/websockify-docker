@@ -19,5 +19,5 @@ repos:
       - id: docker-hadolint
         name: Run hadolint with docker
         language: docker_image
-        entry: hadolint/hadolint:v2.9.3 hadolint
+        entry: hadolint/hadolint:v2.10.0 hadolint
         files: Dockerfile
