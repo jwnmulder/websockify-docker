@@ -1,4 +1,4 @@
-FROM python:3.11.1-slim-bullseye@sha256:33a1008485e1a2dc565be79ece483b240cbc4d6266d6144a57a5a9965ede9bbf
+FROM python:3.11.2-slim-bullseye@sha256:64eb3661444eb66fa45d5aaaba743f165990235dd7da61a1f5042c61e98da37a
 
 WORKDIR /root
 
