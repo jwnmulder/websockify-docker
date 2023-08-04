@@ -20,7 +20,7 @@ jobs:
       - name: Get websockify version
         run: |
           VERSION=$( grep -oP "websockify==\K.*" requirements.txt )
-          echo "::set-output name=version::$VERSION"
+          echo "version=$VERSION" >> $GITHUB_OUTPUT
         id: websockify_version
 
       - name: Docker meta
