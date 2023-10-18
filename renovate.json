@@ -25,6 +25,12 @@
     {
       "matchDatasources": ["docker"],
       "matchPackageNames": "python",
+      "matchUpdateTypes": ["major", "minor"],
+      "dependencyDashboardApproval": true
+    }
+    {
+      "matchDatasources": ["docker"],
+      "matchPackageNames": "python",
       "matchUpdateTypes": ["patch", "pin", "digest"],
       "automerge": true,
       "addLabels": ["automerge"],
