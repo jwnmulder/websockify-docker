@@ -19,7 +19,11 @@
     },
     {
       "matchDatasources": ["docker"],
-      "matchFiles": ["Dockerfile"],
+      "matchPackageNames": ["python"],
+      "separateMinorPatch": true
+    },
+    {
+      "matchDatasources": ["docker"],
       "matchPackageNames": "python",
       "matchUpdateTypes": ["patch", "pin", "digest"],
       "automerge": true,
