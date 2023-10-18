@@ -3,6 +3,8 @@
     "github>jwnmulder/renovate-config"
   ],
 
+  "assignees": [ "jwnmulder" ],
+
   "packageRules": [
     {
       "matchDatasources": ["docker"],
