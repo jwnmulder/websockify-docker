@@ -27,7 +27,7 @@
       "matchPackageNames": "python",
       "matchUpdateTypes": ["major", "minor"],
       "dependencyDashboardApproval": true
-    }
+    },
     {
       "matchDatasources": ["docker"],
       "matchPackageNames": "python",
