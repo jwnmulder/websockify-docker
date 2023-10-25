@@ -36,15 +36,5 @@
       "addLabels": ["automerge"],
       "extends": ["schedule:weekly"]
     }
-  ],
-
-  "regexManagers": [
-    {
-      "fileMatch": ["(^|/)\\.pre-commit-config\\.yaml$"],
-      "matchStrings": [
-        "\\s*language:\\sdocker_image\n\\s*entry:\\s(?<depName>.*?):(?<currentValue>.*?)\\s.*"
-      ],
-      "datasourceTemplate": "docker"
-    }
   ]
 }
