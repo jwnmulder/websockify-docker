@@ -3,9 +3,7 @@ name: trivy
 on:
   schedule:
     - cron: '15 10 * * 1'
-  repository_dispatch:
-    branches:
-      - main
+  workflow_dispatch: {}
 
 permissions:
   contents: read
