@@ -8,7 +8,7 @@ name: trivy
 on:
   schedule:
     - cron: '15 10 * * 1'
-  repository_dispatch:
+  repository_dispatch: {}
 
 permissions:
   contents: read
