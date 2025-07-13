@@ -1,70 +1,36 @@
 {
-  "extends": [
-    "github>jwnmulder/renovate-config"
-  ],
-  "assignees": [
-    "jwnmulder"
-  ],
+  "extends": ["github>jwnmulder/renovate-config"],
+  "assignees": ["jwnmulder"],
   "packageRules": [
     {
-      "matchDatasources": [
-        "docker"
-      ],
-      "matchFileNames": [
-        "Dockerfile"
-      ],
+      "matchDatasources": ["docker"],
+      "matchFileNames": ["Dockerfile"],
       "pinDigests": true
     },
     {
-      "matchFileNames": [
-        ".pre-commit-config.yaml"
-      ],
-      "matchUpdateTypes": [
-        "minor",
-        "patch"
-      ],
+      "matchFileNames": [".pre-commit-config.yaml"],
+      "matchUpdateTypes": ["minor", "patch"],
       "automerge": true,
-      "addLabels": [
-        "automerge"
-      ]
+      "addLabels": ["automerge"]
     },
     {
-      "matchDatasources": [
-        "docker"
-      ],
-      "matchPackageNames": [
-        "python"
-      ],
+      "matchDatasources": ["docker"],
+      "matchPackageNames": ["python"],
       "separateMinorPatch": true
     },
     {
-      "matchDatasources": [
-        "docker"
-      ],
+      "matchDatasources": ["docker"],
       "matchPackageNames": "python",
-      "matchUpdateTypes": [
-        "major",
-        "minor"
-      ],
+      "matchUpdateTypes": ["major", "minor"],
       "dependencyDashboardApproval": true
     },
     {
-      "matchDatasources": [
-        "docker"
-      ],
+      "matchDatasources": ["docker"],
       "matchPackageNames": "python",
-      "matchUpdateTypes": [
-        "patch",
-        "pin",
-        "digest"
-      ],
+      "matchUpdateTypes": ["patch", "pin", "digest"],
       "automerge": true,
-      "addLabels": [
-        "automerge"
-      ],
-      "extends": [
-        "schedule:weekly"
-      ]
+      "addLabels": ["automerge"],
+      "extends": ["schedule:weekly"]
     }
   ]
 }
