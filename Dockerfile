@@ -1,4 +1,4 @@
-FROM python:3.13.12-slim-bookworm@sha256:1245b6c39d0b8e49e911c7d07b60cd9ed26016b0e439b6903d5e08730e417553
+FROM python:3.13.12-slim-bookworm@sha256:01f42367a0a94ad4bc17111776fd66e3500c1d87c15bbd6055b7371d39c124fb
 
 WORKDIR /root
 
